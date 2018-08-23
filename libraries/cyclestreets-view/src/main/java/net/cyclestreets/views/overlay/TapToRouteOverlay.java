@@ -87,7 +87,7 @@ public class TapToRouteOverlay extends Overlay
 
   private final Button routingInfoRect;
   private final ImageView routeNowIcon;
-  private final FloatingActionButton restartButton;
+  private final ImageView restartButton;
 
   private final CycleMapView mapView;
 
@@ -323,9 +323,9 @@ public class TapToRouteOverlay extends Overlay
 
   private void drawRestartButton() {
     if (tapState == TapToRoute.ALL_DONE) {
-      restartButton.show();
+      restartButton.setVisibility(View.VISIBLE);
     } else {
-      restartButton.hide();
+      restartButton.setVisibility(View.GONE);
     }
   }
 

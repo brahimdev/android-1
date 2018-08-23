@@ -34,15 +34,25 @@
       android:orientation="horizontal"
       android:layout_gravity="bottom|left"
       android:layout_margin="16dp">
-        <android.support.design.widget.FloatingActionButton
-          android:id="@+id/route_highlight_prev"
-          android:layout_width="wrap_content"
+        <Button
+          android:id="@+id/route_highlight_start"
+          android:layout_width="0dp"
+          android:layout_weight="1"
           android:layout_height="wrap_content"
-          app:fabSize="normal"
-          app:borderWidth="12dp"
-          app:ico_icon="gmd_chevron_left"
-          app:ico_color="?android:textColorSecondary"
-          app:backgroundTint="@android:color/background_light" />
+          android:text="{gmd_first_page}"
+          android:textSize="48sp"
+          android:textColor="?android:textColorSecondary"
+          android:background="@android:color/background_light" />
+        <Button
+          android:id="@+id/route_highlight_prev"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="{gmd_chevron_left}"
+          android:textSize="48sp"
+          android:textColor="?android:textColorSecondary"
+          android:background="@android:color/background_light" />
+
         <android.support.design.widget.FloatingActionButton
           android:id="@+id/route_highlight_next"
           android:layout_width="wrap_content"
@@ -52,20 +62,43 @@
           app:ico_icon="gmd_chevron_right"
           app:ico_color="?android:textColorSecondary"
           app:backgroundTint="@android:color/background_light" />
+
+        <Button
+          android:id="@+id/route_highlight_end"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="{gmd_last_page}"
+          android:textSize="48sp"
+          android:textColor="?android:textColorSecondary"
+          android:background="@android:color/background_light" />
+
     </LinearLayout>
 
     <!-- Restart route planning -->
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/restartbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_margin="16dp"
-        android:visibility="invisible"
-        app:fabSize="normal"
-        app:borderWidth="12dp"
-        app:ico_icon="gmd_replay"
-        app:ico_color="?android:textColorSecondary"
-        app:backgroundTint="@android:color/background_light" />
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/restartbutton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|center_horizontal"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:visibility="invisible"-->
+        <!--app:fabSize="normal"-->
+        <!--app:borderWidth="12dp"-->
+        <!--app:ico_icon="gmd_replay"-->
+        <!--app:ico_color="?android:textColorSecondary"-->
+        <!--app:backgroundTint="@android:color/background_light" />-->
+    <ImageView
+      android:id="@+id/restartbutton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|center_horizontal"
+      android:layout_margin="16dp"
+      android:visibility="invisible"
+      app:borderWidth="12dp"
+      app:ico_icon="gmd_replay"
+      app:ico_color="?android:textColorSecondary"
+      app:ico_size="48dp"
+      android:background="@android:color/background_light" />
 
 </android.support.design.widget.CoordinatorLayout>

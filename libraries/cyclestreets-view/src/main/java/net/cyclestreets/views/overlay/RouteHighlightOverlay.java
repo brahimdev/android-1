@@ -26,7 +26,7 @@ public class RouteHighlightOverlay extends Overlay
 
   private final Button routingInfoRect;
   private final ImageView routeNowIcon;
-  private final FloatingActionButton prevButton;
+  private final Button prevButton;
   private final FloatingActionButton nextButton;
 
   private int highlightColour;
@@ -74,15 +74,15 @@ public class RouteHighlightOverlay extends Overlay
 
   private void drawButtons() {
     if (!Route.available()) {
-      prevButton.hide();
-      nextButton.hide();
+      prevButton.setVisibility(View.GONE);
+      nextButton.setVisibility(View.GONE);
       return;
     }
 
     prevButton.setEnabled(!Route.journey().atStart());
-    prevButton.show();
+    prevButton.setVisibility(View.VISIBLE);
     nextButton.setEnabled(!Route.journey().atEnd());
-    nextButton.show();
+    nextButton.setVisibility(View.VISIBLE);
   }
 
   private void drawSegmentInfo() {
